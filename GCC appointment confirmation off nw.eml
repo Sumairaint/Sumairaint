@@ -1,0 +1,82 @@
+Delivered-To: sumairainternational.pk@gmail.com
+Received: by 2002:a05:6a10:3e0b:0:0:0:0 with SMTP id f11csp2887778pxv;
+        Sat, 2 Jul 2022 19:27:48 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1tUqzMflCM5K53pGs/HJk0QBvQrYUfrsiUR8IKrfBHpQdw99PGbEIGyiHnRqUrhk6N0VFmF
+X-Received: by 2002:ad4:574f:0:b0:472:bcaa:9a99 with SMTP id q15-20020ad4574f000000b00472bcaa9a99mr12900371qvx.76.1656815268042;
+        Sat, 02 Jul 2022 19:27:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656815268; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fRhPOdgR7LZUKJgXK8BVUZI5wOUhDOHDeyAkQkr5/XPRlK5vTQ8EroxewNsKn6wn+B
+         yv20xgz67czAQpZ9Y8VRkNKaavEE4Lb37NcvZa4oGkbokfJoj9xCDPe5ZWxJqvK/QjWh
+         WUBP2R8qCoEx8hs3FHycyvbnUy3zdzCar8m8g2ItsCDe1O1Nzhzo8a42JgLqEA/ceja5
+         QDnQlVdtYMZR/hmPBMMp6KPrpsNbrridapWaF4ncfOF4Hk6xvO2U/zqgcYjkfV9MEKg8
+         jbn3BWZ5YEs9bT2Awmn6cnpcXUKd6rb93F/p9OptcssexrdFsb7YLRYC5rPjr4K4enll
+         8q6w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:message-id:date:from:subject:content-transfer-encoding
+         :mime-version:dkim-signature:dkim-signature;
+        bh=Cm+qssPhzAiFcxL/WnfDBWFrqauMtMERjzEarqnGX34=;
+        b=xzBkOQ77XSd5opbSHEMzCkeAvmKVBXknA4iVcUUnND+Dhiu3s6U+N7Olh6oZsWJGcr
+         KTyooUH/VnNSDlD5qsXNnw0gaVJ7z+T9193wHQewIAwsOMOddn4/wj31fngPJzWaIjMA
+         57hayb7wnmvamEeH++NWhxhtUTveWcaELpTHfN+k60CwzuUQBGJvShNXiEWCZ6lAI9H9
+         pF0R/F2d1V24MkHl9AH4J8rskgn8l8rOEoU8XG4mOXYJhJVERLBvOq5jsWAkkWqqKmm2
+         TBjhrVbQWSJJYJ+gqa6TOsA8AJ7tlciDjl9zwQ3sHKJ5KYdX6VQBrTAo5zFxLVXbIUhw
+         i1rg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gcchmc.org header.s=s1 header.b=SJQ1cLzl;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=hFDlbj2N;
+       spf=neutral (google.com: 208.117.51.116 is neither permitted nor denied by best guess record for domain of bounces+13918596-2ee1-sumairainternational.pk=gmail.com@em5627.gcchmc.org) smtp.mailfrom="bounces+13918596-2ee1-sumairainternational.pk=gmail.com@em5627.gcchmc.org"
+Return-Path: <bounces+13918596-2ee1-sumairainternational.pk=gmail.com@em5627.gcchmc.org>
+Received: from dhtrpptq.outbound-mail.sendgrid.net (dhtrpptq.outbound-mail.sendgrid.net. [208.117.51.116])
+        by mx.google.com with ESMTPS id fb11-20020a05622a480b00b0031d2a6a76f8si6003425qtb.190.2022.07.02.19.27.47
+        for <sumairainternational.pk@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 02 Jul 2022 19:27:47 -0700 (PDT)
+Received-SPF: neutral (google.com: 208.117.51.116 is neither permitted nor denied by best guess record for domain of bounces+13918596-2ee1-sumairainternational.pk=gmail.com@em5627.gcchmc.org) client-ip=208.117.51.116;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gcchmc.org header.s=s1 header.b=SJQ1cLzl;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=hFDlbj2N;
+       spf=neutral (google.com: 208.117.51.116 is neither permitted nor denied by best guess record for domain of bounces+13918596-2ee1-sumairainternational.pk=gmail.com@em5627.gcchmc.org) smtp.mailfrom="bounces+13918596-2ee1-sumairainternational.pk=gmail.com@em5627.gcchmc.org"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gcchmc.org;
+	h=content-type:mime-version:content-transfer-encoding:subject:from:
+	x-feedback-id:to;
+	s=s1; bh=Cm+qssPhzAiFcxL/WnfDBWFrqauMtMERjzEarqnGX34=;
+	b=SJQ1cLzlETL0W7mOG3+jk91JVRXkhvve5ijXXMT1C2HgIM7BbgJLBDqBR91MfBA5yE+m
+	4fI1xg3N9uSckFj63X/S9yqpa3i7lKcE7IzaRSNyobxt8ZOMsFPGhwRnAv4mFhd+yLUaRL
+	Jich0JjVQzwlQJECPFstJMJzwrNq2Yf+Jvbvlxw+JzuYkCBSBCE9ejHwke0eMHA4inNEsA
+	9i4V5TMrjUAKB2El3PBrIvD7C1kLepB6uE7VTRkcC4y3eYvhUn0z6wYOXcnUjyJihx9jTd
+	dAlsH05aFSEdQ7P9LyAM0XZlUwOnXMH87j0AM7TFnWg6dydNaqWF/ILmrdc+E/EQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:mime-version:content-transfer-encoding:subject:from:
+	x-feedback-id:to;
+	s=smtpapi; bh=Cm+qssPhzAiFcxL/WnfDBWFrqauMtMERjzEarqnGX34=;
+	b=hFDlbj2NUBZmWcYSDKVEe3n5HCG6LSfxwKPxiZBrvNEyuKZVwYitR/zez77zDizR4C0X
+	D5vPuoOnUxlIkFvIbJvZ9gXCmsxwaY3MgDq87OPHunDu2i8uapsvKAn2Tv+iGDbVo1d0RA
+	lG1SNSqOVahpsrv+xbKN3YRcs3ahh5mCY=
+Received: by filterdrecv-679d49d7d8-m45zw with SMTP id filterdrecv-679d49d7d8-m45zw-1-62C0FEA3-11
+        2022-07-03 02:27:47.639328754 +0000 UTC m=+2106310.131171729
+Received: from celery-worker-77c754db55-p78st (unknown)
+	by geopod-ismtpd-1-0 (SG) with ESMTP id HgV7bJSVQ_SAT-Kpfnvtyw
+	for <Sumairainternational.pk@gmail.com>;
+	Sun, 03 Jul 2022 02:27:47.413 +0000 (UTC)
+Content-Type: text/plain; charset=utf-8
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: GCC appointment confirmation
+From: no-reply@gcchmc.org
+Date: Sun, 03 Jul 2022 02:27:47 +0000 (UTC)
+Message-ID: 
+ <165681526721.29.4404074863963710237@celery-worker-77c754db55-p78st>
+X-Feedback-ID: 13918596:SG
+X-SG-EID: 
+ =?us-ascii?Q?nNFctdm0BWd6iTjLSzehWWFqJ7Dx6gER73q2HZHvOtA=2FTv8nnaUZe9vXYJWXWn?=
+ =?us-ascii?Q?YAXvXQCbwAyawRAj0MC1VsQVZtnsXlakNBBbeGT?=
+ =?us-ascii?Q?jrCmKiX8puDs5HX8WqjQO9znzDs103L0V7qsLeZ?=
+ =?us-ascii?Q?1eNFO1bpz9ibBRccCEMezNmWW7Kz=2F6DKXmsy2It?=
+ =?us-ascii?Q?arMOHLmkobu=2FsjmvLsqmUSgy0=2F8slDqPtKQHxoW?=
+ =?us-ascii?Q?vGifHrhcJu5BOxsGk=3D?=
+To: Sumairainternational.pk@gmail.com
+X-Entity-ID: KLMwLhVxB5WC1xiSS84Myg==
+
+Your appointment has been booked at Well Being Diagnostic Center.
+Your slip №80207202233340710 is valid until 1 Aug 2022.
